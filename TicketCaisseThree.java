@@ -50,8 +50,8 @@ class TicketCaisseThree {
     public static void modifieQuantiteArticle( String nom, double quant ) {
 
         int positionArticle = noms.indexOf( nom );
-        noms.set(positionArticle, "thym");
-        quantites.set(positionArticle, 4.0);
+        noms.set(positionArticle, "romarin");
+        quantites.set(positionArticle, 1.0);
     }
 
     public static void main(String[] args) {
