@@ -8,18 +8,25 @@ class  ConditionBronzesFontDuSki {
         switch(nom){
         case "Nathalie Morin" :
             sport="Elle gueule";
+            break;
         case "Jean-Claude Dusse" :
             sport="La loose";
+            break;
         case "Gigi " :
             sport="Servir des crêpes";
+            break;
         case "Jérôme Tarayre" :
             sport="Perdre sa licence";
+            break;
         case "Bernard Morin":
             sport="On sait pas";
+            break;
         case "Popeye":
             sport="Se faire avoir dans son magasin";
+            break;
         case"":
             sport="rien";
+            break;
         }
         return sport;
     }
