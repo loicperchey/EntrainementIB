@@ -11,8 +11,8 @@ class Ligne
     Double pu   = 0.0;
     Double quantite  = 0.0;
     Double prixTot =  0.0;
+    
 
-   
 
     static Integer nbrLigne=0;
 
@@ -44,20 +44,22 @@ class Ligne
     {
         this.prixTot = this.quantite*this.pu;
     }
-
+    
 }
+
 
 class Ticket 
 {
     String client  = "";
     Double prixTot =  0.0;
+    Double prixTotal = 0.0;
 
     static int noOfObjets =0;
     {
         noOfObjets +=  1;
     }
 
-    static ArrayList<Ligne> lignes = new ArrayList();
+    ArrayList<Ligne> lignes = new ArrayList<Ligne>();
 
     public Ticket(String ticket){
         this.client = ticket;
@@ -65,9 +67,10 @@ class Ticket
 
     public void addAchat(Ligne l)
     {
-        lignes.add(l);
-
+        this.lignes.add(l);
+        this.prixTotal += l.prixTot;
     }
+    
     public void affTicket()
         {
         System.out.println("=============================");
@@ -76,8 +79,10 @@ class Ticket
             l.affLigne();
         }
         System.out.println(lignes.size());
+        System.out.print(this.prixTotal);
         System.out.println("=============================");
     }
+
 
  
 }
@@ -98,6 +103,7 @@ class TiroirCaissePOOOne {
         t1.addAchat(new Ligne("réglisse", 8.75, 0.5));
         t1.addAchat(new Ligne("bettes", 2.4, 1.0));
         t1.affTicket();
+        
 
         Ticket t2 = new Ticket("Robin des bois");
         t2.addAchat(new Ligne("romarin", 7.56, 1.0));
@@ -106,6 +112,7 @@ class TiroirCaissePOOOne {
         t2.addAchat(new Ligne("réglisse", 8.75, 0.5));
         t2.addAchat(new Ligne("bettes", 2.4, 1.0));
         t2.affTicket();
+       
 
         System.out.println(String.format("nombre de lignes : %d", Ligne.nbrLigne));
         System.out.println(Ticket.noOfObjets);
