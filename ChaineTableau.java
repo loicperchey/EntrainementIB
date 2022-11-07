@@ -20,6 +20,8 @@ public class ChaineTableau {
             int codeMajASCIIMAJ = codeASCII - codeMajASCII_MIN;
             System.out.println( String.format( "n° %2d : %1c %3d %1c", i, caractere, codeASCII, codeMajASCIIMAJ));
 
+            //test
+
         }
      
     }
