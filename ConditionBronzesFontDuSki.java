@@ -7,56 +7,29 @@ class  ConditionBronzesFontDuSki {
         String sport="";
         switch(nom){
         case "Nathalie Morin" :
-            sport="";
+            sport="Elle gueule";
         case "Jean-Claude Dusse" :
-            sport="";
+            sport="La loose";
         case "Gigi " :
-            sport="";
+            sport="Servir des crêpes";
         case "Jérôme Tarayre" :
-            sport="";
+            sport="Perdre sa licence";
         case "Bernard Morin":
-            sport="";
+            sport="On sait pas";
         case "Popeye":
-            sport="";
+            sport="Se faire avoir dans son magasin";
         case"":
             sport="rien";
         }
         return sport;
     }
 
-    public static String choixDeLactivite(String nom){
-        String sport="";
-        if(nom=="Nathalie Morin"){
-            sport="";
-        }
-        else if(nom=="Jean Claude Dusse"){
-            sport="";
-        }
-        else if (nom=="Gigi"){
-            sport="";
-        } 
-           
-        else if (nom=="Jérôme Tarayre"){
-            sport="";
-        }
-        else if (nom=="Bernard Morin"){
-            sport="";
-        }
-        else if (nom=="Popeye"){
-            sport="";
-        }
-        else{
-            sport="aucun";
-        }
-        return sport;
-       
-    }
     public static void main(String[] args) {
 
-        String nom = "toto";
+        String nom = "Jean-Claude Dusse";
        
 
-        System.out.println( String.format(" %s fait du %s " , nom, choixDuSport(nom)));
+        System.out.println( String.format(" %s fait du %s " , nom, queFaitIlElle(nom)));
 
     }
 }
