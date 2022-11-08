@@ -119,7 +119,7 @@ class TiroirCaissePOOOne {
        
 
         System.out.println(String.format("nombre de lignes : %d", Ligne.nbrLigne));
-        System.out.println(Ticket.noOfObjets+Ligne.noOfObjets);
+        System.out.println(String.format("Le nombre d'objets est de : %f",Ticket.noOfObjets+Ligne.noOfObjets));
 
     }
 }
