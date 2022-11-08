@@ -14,7 +14,7 @@ class Point
 
     public void affiche()
     {
-        System.out.println(String.format("{%d, %d}",this.x, this.y));
+        System.out.println(String.format("Le point est aux coordonnées {%d, %d}",this.x, this.y));
     }
 }
 
@@ -30,7 +30,7 @@ class Cercle extends Point
 
     public void affiche()
     {
-        System.out.println(String.format("{%d, %d} rayon=%d", this.x, this.y, this.rayon));
+        System.out.println(String.format("Le cercle est au point de coordonnées {%d, %d} pour un rayon== de %d", this.x, this.y, this.rayon));
     }
 }
 
@@ -46,7 +46,7 @@ class Carre extends Point
 
     public void affiche()
     {
-        System.out.println(String.format("{%d, %d} longueur=%d", this.x, this.y, this.longueur));
+        System.out.println(String.format("Le carré est au point de coordonnées {%d, %d} pour une longueur de %d", this.x, this.y, this.longueur));
     }
 }
 
@@ -62,7 +62,7 @@ class Rectangle extends Carre
 
     public void affiche()
     {
-        System.out.println(String.format("{%d, %d} longueur=%d, largueur=%d", this.x, this.y, this.longueur, this.largueur));
+        System.out.println(String.format("Le rectangle est au point de coordonnées {%d, %d} pour une longueur de %d et sa largueur est de %d", this.x, this.y, this.longueur, this.largueur));
     }
 }
 class POOFigureOne {
