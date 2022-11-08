@@ -40,10 +40,6 @@ class Ligne
         this.prixTot = this.quantite*this.pu;
     }
 
-    private void CalculTotal()
-    {
-        this.prixTot = this.quantite*this.pu;
-    }
     
 }
 
@@ -70,7 +66,7 @@ class Ticket
         this.lignes.add(l);
         this.prixTotal += l.prixTot;
     }
-    
+
     public void affTicket()
         {
         System.out.println("=============================");
