@@ -7,14 +7,20 @@ class Ligne
 
    
 
-    String libel  = "";
-    Double pu   = 0.0;
-    Double quantite  = 0.0;
-    Double prixTot =  0.0;
+    protected String libel  = "";
+    protected Double pu   = 0.0;
+    protected Double quantite  = 0.0;
+    protected Double prixTot =  0.0;
+    
     
 
 
     static Integer nbrLigne=0;
+
+    static int noOfObjets =0;
+    {
+        noOfObjets +=  1;
+    }
 
     public Ligne (String nom, double pu, Double qte)
     {
@@ -50,12 +56,14 @@ class Ticket
     Double prixTot =  0.0;
     Double prixTotal = 0.0;
 
+   
+    ArrayList<Ligne> lignes = new ArrayList<Ligne>();
+
     static int noOfObjets =0;
     {
         noOfObjets +=  1;
     }
 
-    ArrayList<Ligne> lignes = new ArrayList<Ligne>();
 
     public Ticket(String ticket){
         this.client = ticket;
@@ -111,7 +119,7 @@ class TiroirCaissePOOOne {
        
 
         System.out.println(String.format("nombre de lignes : %d", Ligne.nbrLigne));
-        System.out.println(Ticket.noOfObjets);
+        System.out.println(Ticket.noOfObjets+Ligne.noOfObjets);
 
     }
 }
