@@ -16,6 +16,12 @@ class Point
     {
         System.out.println(String.format("Le point est aux coordonnées {%d, %d}",this.x, this.y));
     }
+
+    public void move(int dx, int dy)
+    {
+        this.x += dx;
+        this.y += dy;
+    }
 }
 
 class Cercle extends Point
@@ -31,6 +37,11 @@ class Cercle extends Point
     public void affiche()
     {
         System.out.println(String.format("Le cercle est au point de coordonnées {%d, %d} pour un rayon== de %d", this.x, this.y, this.rayon));
+    }
+
+    public Double surface()
+    {
+        return this.rayon*this.rayon*3.14159;
     }
 }
 
@@ -64,6 +75,13 @@ class Rectangle extends Carre
     {
         System.out.println(String.format("Le rectangle est au point de coordonnées {%d, %d} pour une longueur de %d et sa largueur est de %d", this.x, this.y, this.longueur, this.largueur));
     }
+
+    public Integer surface()
+    {
+        return this.longueur*largueur;
+    }
+
+   
 }
 class POOFigureOne {
    
@@ -74,14 +92,20 @@ class POOFigureOne {
         p1.affiche();
         Cercle c1= new Cercle (5,6, 45);
         c1.affiche();
-
+        c1.move(7, 8);
+        c1.affiche();
+        System.out.println(String.format("Surface cercle %f", c1.surface()));
         
         Carre k1 = new Carre( 18, -3, 15 );
         k1.affiche();
         // Carre : (5, 6) cote=15
         Rectangle r1 = new Rectangle( 3, 19, 99, 18 );
         r1.affiche();
+
+        r1.move(3,4);
+        r1.affiche();
         // Rectangle : (5, 6) long=99 lar=18
+        System.out.println(String.format("Surface rectangle %d", r1.surface()));
        
     }
 }
