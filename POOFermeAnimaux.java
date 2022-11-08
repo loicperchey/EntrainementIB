@@ -95,17 +95,58 @@ abstract class Animal
                             }
                 }
                 
+    class LaFerme 
+                {
+                    String nomFerme  = "";
+                    String composeDe = "";
+                
+                    public LaFerme (String nomFerme, String composeDe){
+                        this.nomFerme=nomFerme;
+                        this.composeDe = composeDe;
+                    }
+
+                    public void ExpressionFerme(){
+                        System.out.println(String.format(" Je suis une ferme nommée %s composée de %s",  this.nomFerme, this.composeDe));
+                        }
+                 
+                }
+
+                class Champs extends LaFerme{
+                    Vache v1, v2;
+                    public Champs(){
+                    super("champs", "vache");
+                    this.v1 = new Vache("Milka", "herbes", 1.40, 300.02, "lait");
+                    this.v2 = new Vache("whooper", "herbes", 1.40, 300.02, "viande");
+                    }
+                    public void DansLaFerme(){
+                    ExpressionFerme();
+                    v1.Expression();
+                    v2.Expression();
+                    }
+                }
+                class Poulailler extends LaFerme{
+                    Poule p1, p2;
+                    public Poulailler(){
+                    super("Poulailler", "poules");
+                    this.p1 = new Poule("Doux", "graines", 40.04, 4.00, "viande");
+                    this.p2 = new Poule("Cassegrain", "graines", 40.04, 4.00, "oeufs");
+                    }
+                    public void DansLaFerme(){
+                    ExpressionFerme();
+                    p1.Expression();
+                    p2.Expression();
+                    }
+                }
+
 
 class POOFermeAnimaux {
    
     public static void main(String[]args) 
     {
-        Vache v1 = new Vache("Vache", "herbe", 1.40, 300.02, "lait");
-
-        Poule p1 = new Poule("Vache", "herbe", 1.40, 300.02, "lait");
-
-        v1.Expression();
-        p1.Expression();
+        Poulailler pp1 = new Poulailler();
+        pp1.DansLaFerme();
+        Champs cc1 = new Champs();
+        cc1.DansLaFerme();
        
     }
 }
