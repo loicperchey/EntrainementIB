@@ -86,7 +86,7 @@ class Ticket
 
 class TiroirCaissePOOOne {
 
-    static ArrayList<Ligne> lignes = new ArrayList();
+    static ArrayList<Ligne> lignes = new ArrayList<Ligne>();
     
 
    
