@@ -17,11 +17,6 @@ class Ligne
 
     static Integer nbrLigne=0;
 
-    static int noOfObjets =0;
-    {
-        noOfObjets +=  1;
-    }
-
     public Ligne (String nom, double pu, Double qte)
     {
         this.libel  = nom;
@@ -119,7 +114,7 @@ class TiroirCaissePOOOne {
        
 
         System.out.println(String.format("nombre de lignes : %d", Ligne.nbrLigne));
-        System.out.println(String.format("Le nombre d'objets est de : %f",Ticket.noOfObjets+Ligne.noOfObjets));
+        System.out.println(String.format("Le nombre d'objets est de : %f",Ticket.noOfObjets));
 
     }
 }
