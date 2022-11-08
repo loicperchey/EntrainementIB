@@ -41,6 +41,13 @@ class Ligne
         this.prixTot = this.quantite*this.pu;
     }
 
+    public Double getPrixTot(){
+
+        return this.prixTot;
+
+    }
+
+
     
 }
 
