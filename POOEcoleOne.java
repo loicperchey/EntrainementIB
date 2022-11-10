@@ -39,6 +39,43 @@ class CarnetNotes
     }
 }
 
+class Devoir
+{
+    String matiereDevoir;
+    String devoir;
+
+    public Devoir( String matD, String d)
+    {
+        this.matiereDevoir = matD;
+        this.devoir = d;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + matiereDevoir + ", " + devoir + ")";
+    } 
+}
+
+class CarnetDevoir
+{
+    ArrayList<Devoir> devoirs = new ArrayList<>(); 
+
+    public CarnetDevoir(){}
+
+    public void ajouter( Devoir d )
+    {
+        this.devoirs.add( d );
+    }
+
+    public String toString()
+    {
+        String res = "";
+        for (Devoir d : this.devoirs) {
+            res += d;
+        }
+        return "[" + res + "]";
+    }
+}
 class Klasse
 {
     String nom;
@@ -155,13 +192,18 @@ class Staff extends Individus {
 
 class Eleve extends Individus {
     CarnetNotes note = new CarnetNotes();
+    CarnetDevoir devoir = new CarnetDevoir();
 
     public Eleve(String nom) {
         super(nom);
     }
 
     public String toString() {
-        return String.format("Eleve(%s, %s)", this.nom, this.note);
+
+
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxx "+ this.note);
+        
+        return String.format("Eleve(%s, %s, %s)", this.nom, this.note, this.devoir);
     }
 
     public void ajouterNote( String matiere, int val )
@@ -169,12 +211,17 @@ class Eleve extends Individus {
         this.note.ajouter( new Note( matiere, val )  );
     } 
 
+    public void ajouterDevoir(String matiereDevoir, String enonceDevoir)
+    {
+        this.devoir.ajouter(new Devoir(matiereDevoir, enonceDevoir));
+    }
 
     public void ouverture()
     {
         System.out.println( "sort ses cahiers" );
         System.out.println( "répond à l'appel" );
     }
+
 }
 
 class Prof extends Staff {
@@ -329,6 +376,7 @@ class POOEcoleOne {
         e2.ajouterNote( "math", 12);
         e2.ajouterNote( "sport", 17);
         e2.ajouterNote( "français", 18);
+        e2.ajouterDevoir("informatique", "Test");
 
         System.out.println( e2 );
         
