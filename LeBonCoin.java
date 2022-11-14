@@ -1,5 +1,6 @@
 import LBC.Location;
 import LBC.Annonce;
+import LBC.CartesDeJeu;
 import LBC.Vehicule;
 import LBC.Job;
 import java.util.Scanner; 
@@ -22,6 +23,8 @@ public class LeBonCoin {
             a = new Vehicule();
         else if ( typeAnnonce.equals( "job" ) )
             a = new Job();
+        else if ( typeAnnonce.equals( "CartesDeJeu" ) )
+            a = new CartesDeJeu();
 
         a.saisie( sc );
         System.out.println( a );

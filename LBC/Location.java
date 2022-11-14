@@ -14,12 +14,13 @@ public class Location extends Annonce {
         return "Je suis une Annonce";
     }
 
-    public void saisieLocation()
+    public void saisie(Scanner sc)
     {
+        super.saisie(sc);
         System.out.print("Quel est la surface ? : ");
-        this.surface = saisie.nextInt();
+        this.surface = sc.nextInt();
         System.out.print("Nombre de pièces : ");
-        this.nbrPiece = saisie.nextInt();
+        this.nbrPiece = sc.nextInt();
      
    
        
