@@ -9,16 +9,16 @@ public class Vehicule extends Annonce{
     {}
 
     public String toString(){
-        return "Je suis une Annonce";
+        return String.format("Modèle : %s\n kilométrage : %f", this.title, this.price, this.description);
     }
 
     public void saisie(Scanner sc)
     { 
         super.saisie(sc);
         System.out.print("Modèle ? : ");
-        this.modèle = saisie.nextLine();
+        this.modèle = sc.nextLine();
         System.out.print("Kilométrage : ");
-        this.kilometrage = saisie.nextDouble();
+        this.kilometrage = sc.nextDouble();
      
         
     }
