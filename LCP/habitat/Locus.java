@@ -1,6 +1,6 @@
 package LCP.habitat;
 
-import insecte.Insecte;
+import LCP.insecte.Insecte;
 
 public class Locus {
     private String nom;
