@@ -1,4 +1,4 @@
-package habitat;
+package LCP.habitat;
 import java.util.*;
 
 public class Atlantide extends Locus {

@@ -1,4 +1,4 @@
-package habitat;
+package LCP.habitat;
 
 import insecte.Insecte;
 

@@ -5,7 +5,10 @@ public class FichierOne
 {
     public static void main(String[]args) throws IOException
     {
-        String file = "FiguresSablier.java";
+        int EOF=-1;
+        int LF = 10;
+        int CR = 13;
+        String file = "LeBonCoin.java";
         try{
             FileReader filereader = new FileReader(file);
             /* 
@@ -15,14 +18,22 @@ public class FichierOne
             }
             */
             int c;
-            int fr_count =0;
-            while (-1 != (c = filereader.read()))
+            int nbrCar =0;
+            int nbrLin =0;
+            while (EOF != (c = filereader.read()))
             {
+                if (c == LF){
+                    nbrLin++;
+                    System.out.println(String.format("%4d", nbrLin));
+                }else{
                 System.out.println( (char)c);
-                fr_count++;
+                }
+                nbrCar++;
             }
+            
             filereader.close();
-            System.out.println(fr_count);
+            System.out.println(nbrCar);
+            System.out.println(nbrLin);
         }
         catch (Exception e){
             e.printStackTrace();

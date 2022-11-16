@@ -1,3 +1,4 @@
+package LCP;
 
 import habitat.Locus;
 import habitat.Alpage;

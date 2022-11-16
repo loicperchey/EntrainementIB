@@ -1,4 +1,4 @@
-package insecte;
+package LCP.insecte;
 
 import javax.script.ScriptException;
 import habitat.Locus;
