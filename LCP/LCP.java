@@ -1,6 +1,6 @@
 
-import LCP.habitat.Locus;
-import LCP.habitat.Alpage;
+import habitat.Locus;
+import habitat.Alpage;
 import habitat.Marin;
 import habitat.Atlantide;
 import habitat.Plaine;

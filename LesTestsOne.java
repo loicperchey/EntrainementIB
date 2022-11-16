@@ -21,36 +21,7 @@ class Atester
             
         }
 
-        public static Integer annéeBissextileBoolean(int an)
-        {
         
-        boolean b = false;
-        {
-        if(an % 400 == 0)
-        {
-            b=true;
-        }
-        else if (an % 100 == 0)
-        {
-            b = false;
-        }
-        else if(an % 4 == 0)
-        {
-            b = true;
-        }
-        else
-        {
-            b= false;
-        }
-
-        if(b == true) {
-            System.out.println("L'année "+ an +" est une année bissextile");
-        } else {
-            System.out.println("L'année "+ an +" n'est pas une année bissextile");
-        }
-        }
-        return an;
-    }     
 }
 
 class LesTestsOne {
@@ -94,8 +65,6 @@ class LesTestsOne {
         else
         System.out.println ("émile = KO");
 
-       
-        Atester.annéeBissextileBoolean(0);
     }
 }
 

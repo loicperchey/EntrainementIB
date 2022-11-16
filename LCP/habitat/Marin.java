@@ -1,4 +1,4 @@
-package LCP.habitat;
+package habitat;
 import java.util.*;
 
 public class Marin extends Locus {

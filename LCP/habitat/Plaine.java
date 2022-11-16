@@ -1,4 +1,4 @@
-package LCP.habitat;
+package habitat;
 import java.util.*;
 
 public class Plaine extends Locus {
