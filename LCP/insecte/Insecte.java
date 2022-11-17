@@ -1,7 +1,7 @@
 package LCP.insecte;
 
 import javax.script.ScriptException;
-import habitat.Locus;
+import LCP.habitat.Locus;
 
 public class Insecte
  {

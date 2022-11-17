@@ -1,14 +1,14 @@
 package LCP;
 
-import habitat.Locus;
-import habitat.Alpage;
-import habitat.Marin;
-import habitat.Atlantide;
-import habitat.Plaine;
-import insecte.Papillon;
-import insecte.Moustique;
-import insecte.Insecte;
-import insecte.Cigale;
+import LCP.habitat.Locus;
+import LCP.habitat.Alpage;
+import LCP.habitat.Marin;
+import LCP.habitat.Atlantide;
+import LCP.habitat.Plaine;
+import LCP.insecte.Papillon;
+import LCP.insecte.Moustique;
+import LCP.insecte.Insecte;
+import LCP.insecte.Cigale;
 
 public class LCP {
     
