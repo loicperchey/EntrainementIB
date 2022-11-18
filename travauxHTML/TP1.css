@@ -3,51 +3,49 @@
     display: flex;
     flex-direction: row;
     border: 5px black;
-    background-color: beige;
+    align-content: center;
+    justify-content: center;
+    margin-top : 15%;
     
 }
+
 .boximage{
-    padding-left: 3px;
-    padding-right: 3px;
+    margin-left: 10%;
+    background-color: beige;
+}
+.imagecss{
+    max-width : 100%;
+    height : auto;
+    width: 400px;
+    height: 400px;
+    margin-right : 15px;
 }
 
 .box2
 {
-   
+    display: block;
+        column-width: 20em;
+        column-rule: 1px solid rgb(75, 70, 74);
+        text-align: center;
+        background-color: beige;
+        
 }
 
 
 .titleh1body1
 {
-   
-    text-align: center;
     font-size : 14px;
 }
 
 .titleh1body2
 {
-    
-    text-align: center;
-    font-size : 30px;
+   
     border-bottom: 1px solid black;
-    padding-bottom : 10px;
-    margin-top: 20px;
-    padding-top : 10px;
-}
-
-.texte
-{
-    display: block;
-        text-align: center;
-        padding :20px;
-        margin-left: auto;
-        margin-right: auto;
+    
 }
 
 .ebutton{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
    
